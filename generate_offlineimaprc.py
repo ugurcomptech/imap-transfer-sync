@@ -2,7 +2,7 @@ import os
 
 # Kullanıcı bilgileri dosyası
 ACCOUNTS_FILE = "accounts.txt"
-OUTPUT_FILE = "offlineimaprc"
+OUTPUT_FILE = os.path.expanduser("~/.offlineimaprc")  # HOME dizinine yazacak
 
 # SSL Sertifika bilgileri (gerekirse değiştir)
 SSL_CERT_FILE = ""
@@ -34,7 +34,7 @@ remoterepository = destination_{i+1}
 
 [Repository source_{i+1}]
 type = IMAP
-remotehost = mail.domain.com
+remotehost = 
 remoteuser = {source_user}
 remotepass = {source_pass}
 ssl = yes
@@ -44,7 +44,7 @@ sslfingerprint = {SSL_FINGERPRINT}
 
 [Repository destination_{i+1}]
 type = IMAP
-remotehost = mail.domain.com
+remotehost = 
 remoteuser = {dest_user}
 remotepass = {dest_pass}
 ssl = yes
@@ -53,7 +53,7 @@ sslcertck = no
 sslfingerprint = {SSL_FINGERPRINT}
 """
 
-# offlineimaprc dosyasını oluştur
+# offlineimaprc dosyasını HOME dizinine yaz
 config = config.format(", ".join(accounts)) + repo_configs
 
 with open(OUTPUT_FILE, "w") as f:
