@@ -79,9 +79,9 @@ remotehost = imail.ugurcomptech.net.tr
 remoteuser = user1@example.com
 remotepass = password1
 ssl = yes
-sslcacertfile = /etc/ssl/certs/iRedMail.crt
+sslcacertfile = 
 sslcertck = no
-sslfingerprint = C4:9B:B1:8C:73:76:53:EA:42:15:33:46:46:EE:CF:D6:AC:37:8C:FB
+sslfingerprint = 
 
 [Repository destination_1]
 type = IMAP
@@ -89,9 +89,9 @@ remotehost = imail.ugurcomptech.net.tr
 remoteuser = user1backup@example.com
 remotepass = password2
 ssl = yes
-sslcacertfile = /etc/ssl/certs/iRedMail.crt
+sslcacertfile = 
 sslcertck = no
-sslfingerprint = C4:9B:B1:8C:73:76:53:EA:42:15:33:46:46:EE:CF:D6:AC:37:8C:FB
+sslfingerprint = 
 ```
 
 Bu yapılandırma ile hesaplar arasında IMAP senkronizasyonu güvenli ve otomatik bir şekilde gerçekleştirilebilir.
