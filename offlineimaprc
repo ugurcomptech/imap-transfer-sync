@@ -1,0 +1,26 @@
+[general]
+accounts = transfer
+
+[Account transfer]
+localrepository = source
+remoterepository = destination
+
+[Repository source]
+type = IMAP
+remotehost = mail.domain.com
+remoteuser = 
+remotepass = 
+ssl = yes
+sslcacertfile = 
+sslcertck = no
+sslfingerprint = 
+
+[Repository destination]
+type = IMAP
+remotehost = mail.domain.com
+remoteuser = 
+remotepass = 
+ssl = yes
+sslcacertfile = 
+sslcertck = no
+sslfingerprint = 
