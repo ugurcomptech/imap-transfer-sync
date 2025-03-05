@@ -100,7 +100,6 @@ Bu yapılandırma ile hesaplar arasında IMAP senkronizasyonu güvenli ve otomat
 
 Anlattığım işlem aynı mail sunucusu içerisinde yapılacak olan mail taşıma işlemieri için geçerlidir. Aşağıdaki yapılandırma ile farklı sunucular arasında da taşıma işlemi sağlayabilirsiniz.
 
-```
 
 [general]
 accounts = transfer_1
