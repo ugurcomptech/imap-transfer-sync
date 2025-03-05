@@ -75,7 +75,7 @@ remoterepository = destination_1
 
 [Repository source_1]
 type = IMAP
-remotehost = imail.ugurcomptech.net.tr
+remotehost = 
 remoteuser = user1@example.com
 remotepass = password1
 ssl = yes
@@ -85,7 +85,7 @@ sslfingerprint =
 
 [Repository destination_1]
 type = IMAP
-remotehost = imail.ugurcomptech.net.tr
+remotehost = 
 remoteuser = user1backup@example.com
 remotepass = password2
 ssl = yes
@@ -95,4 +95,39 @@ sslfingerprint =
 ```
 
 Bu yapılandırma ile hesaplar arasında IMAP senkronizasyonu güvenli ve otomatik bir şekilde gerçekleştirilebilir.
+
+## Farklı Sunucu Üzerinde Mail Taşıma İşlemi
+
+Anlattığım işlem aynı mail sunucusu içerisinde yapılacak olan mail taşıma işlemieri için geçerlidir. Aşağıdaki yapılandırma ile farklı sunucular arasında da taşıma işlemi sağlayabilirsiniz.
+
+```
+
+[general]
+accounts = transfer_1
+
+[Account transfer_1]
+localrepository = source_1
+remoterepository = destination_1
+
+[Repository source_1]
+type = IMAP
+remotehost = 
+remoteuser = 
+remotepass = 
+ssl = no
+port = 143
+
+
+[Repository destination_1]
+type = IMAP
+remotehost = 
+remoteuser = 
+remotepass = 
+ssl = no
+port = 143
+authmechs = LOGIN
+```
+
+
+
 
